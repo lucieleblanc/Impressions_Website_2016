@@ -1,0 +1,67 @@
+body {
+	background-color: #000;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+marquee {
+	margin-top: 75px;
+	background-color: #000;
+	color: #000;
+}
+
+marquee img {
+	height: 250px;
+}
+
+.logo {
+	height: 150px;
+	margin: 15px auto;
+	display: block;
+	text-align: center;
+}
+
+.menu {
+	color: white;
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	opacity: 0.52;
+}
+
+.menu img {
+	width: 35px;
+	height: 15px;
+	margin: 0 auto;
+}
+
+.menu p {
+	font-size: 8pt;
+	font-family: sans-serif;
+	letter-spacing: 1px;
+	margin-top: 1px;
+	text-align: center;
+}
+
+.line {
+	background-color: white;
+	opacity: 0.52;
+	position: absolute;
+}
+
+.line-vertical {
+	width: 3px;
+	height: 100%;
+	left: 50px;
+	top: 0px;
+}
+
+.line-horizontal {
+	width: 100%;
+	height: 3px;
+	bottom: 50px;
+}
