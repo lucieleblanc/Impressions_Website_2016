@@ -8,6 +8,34 @@ a {
 	color: inherit;
 }
 
+.title-box {
+	opacity: 0.52;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.title-box .page-title {
+	position: absolute;
+	top: 7em;
+	left: 3em;
+	right: 0;
+	transform: rotate(-90deg);
+}
+
+.title-box .page-title h1 {
+	color: white;
+	font-size: 8em;
+	font-family: Hadrian;
+	text-align: right;
+	margin: 0;
+}
+
+@font-face {
+	font-family: Hadrian;
+    src: url(fonts/hadrianbold.ttf);
+}
+
 marquee {
 	margin-top: 75px;
 	background-color: #000;
@@ -25,7 +53,7 @@ marquee img {
 	text-align: center;
 }
 
-.menu {
+.menu-button {
 	color: white;
 	position: absolute;
 	top: 25px;
@@ -33,18 +61,31 @@ marquee img {
 	opacity: 0.52;
 }
 
-.menu img {
+.menu-button img {
 	width: 35px;
 	height: 15px;
 	margin: 0 auto;
 }
 
-.menu p {
+.menu-button p {
 	font-size: 8pt;
 	font-family: sans-serif;
 	letter-spacing: 1px;
 	margin-top: 1px;
 	text-align: center;
+}
+
+.home-button {
+	padding: 10px;
+	background-color: #000;
+	position: absolute;
+	bottom: 40px;
+	right: 25px;
+}
+
+.home-button img {
+	width: 200px;
+	margin: 0 auto;
 }
 
 .line {
@@ -56,12 +97,55 @@ marquee img {
 .line-vertical {
 	width: 3px;
 	height: 100%;
-	left: 50px;
-	top: 0px;
 }
 
 .line-horizontal {
 	width: 100%;
 	height: 3px;
+}
+
+.main .line-vertical {
+	left: 50px;
+	top: 0px;
+}
+
+.main .line-horizontal {
 	bottom: 50px;
+}
+
+.about .line-vertical {
+	right: 280px;
+	top: 0px;
+}
+
+#first{
+	right: 0;
+	top: 130px;
+	width: 90%;
+}
+
+#second {
+	left: 0;
+	bottom: 70px;
+	width: 85%;
+}
+
+.content {
+	width: 800px;
+	margin-top: 200px;
+	margin-left: 200px;
+	color: white;
+	font-family: sans-serif;
+	line-height:3em;
+}
+
+/* TODO: maybe the image could 
+instead be part of the 
+vertical-line div it is
+attached to? */
+.aligned-right {
+	position: absolute;
+	width: 280px;
+	right: 0;
+	top: 133px;
 }
