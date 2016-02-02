@@ -17,10 +17,25 @@ a {
 
 .title-box .page-title {
 	position: absolute;
-	top: 7em;
-	left: 3em;
+	left: 4em;
 	right: 0;
 	transform: rotate(-90deg);
+}
+
+.about .title-box .page-title {
+	top: 7em;
+}
+
+.archives .title-box .page-title {
+	top: 13em;
+}
+
+.current .title-box .page-title {
+	top: 20em;
+}
+
+.contact .title-box .page-title {
+	top: 11em;
 }
 
 .title-box .page-title h1 {
@@ -118,34 +133,167 @@ marquee img {
 	top: 0px;
 }
 
-#first{
+.about .line-horizontal-1{
 	right: 0;
 	top: 130px;
 	width: 90%;
 }
 
-#second {
+.about .line-horizontal-2 {
 	left: 0;
 	bottom: 70px;
 	width: 85%;
 }
 
-.content {
-	width: 800px;
-	margin-top: 200px;
-	margin-left: 200px;
+.current .line-horizontal-1 {
+	top: 70px;
+	right: 0;
+	width: 90%;
+}
+
+.current .line-horizontal-2 {
+	bottom: 70px;
+	left: 0;
+	width: 80%;
+}
+
+.archives .line-vertical-1 {
+	left: 300px;
+	top: 0;
+}
+
+.archives .line-vertical-2 {
+	right: 40px;
+	top: 15%;
+	height: 80%;
+}
+
+.archives .line-horizontal {
+	width: 90%;
+	top: 240px;
+	right: 0;
+}
+
+.contact .line-horizontal {
+	width: 60%;
+	top: 200px;
+	right: 0;
+}
+
+.contact .line-vertical-1 {
+	height: 40%;
+	left: 500px;
+	top: 0;
+}
+
+.contact .line-vertical-2 {
+	height: 80%;
+	top: 75px;
+	right: 40px;
+}
+
+.content p {
 	color: white;
 	font-family: sans-serif;
 	line-height:3em;
+}
+
+.content h2 {
+	color: white;
+	opacity: 0.5;
+	font-family: sans-serif;
+	font-weight: 200;
+	font-size: 3em;
+}
+
+.about .content {
+	width: 800px;
+	margin-top: 200px;
+	margin-left: 200px;
+}
+
+.archives .content {
+	width: 60%;
+	margin-top: 300px;
+	margin-left: 30%;
+}
+
+.contact .content {
+	width: 750px;
+	float: right;
+	margin-top: 80px;
+	margin-right: 70px;
 }
 
 /* TODO: maybe the image could 
 instead be part of the 
 vertical-line div it is
 attached to? */
-.aligned-right {
+.about .aligned-right {
 	position: absolute;
 	width: 280px;
 	right: 0;
 	top: 133px;
+}
+
+.archives .top {
+	position: absolute;
+	top: 0;
+	left: 310px;
+}
+
+.archives .left {
+	position: absolute;
+	top: 250px;
+	left: 0;
+}
+
+.archives .top img, .archives .left img {
+	width: 290px;
+}
+
+.current .content {
+	width: 60%;
+	height: 70%;
+	margin: 100px auto;
+	background-color: white;
+}
+
+.current .content div {
+	margin: 0 auto;
+	display: inline;
+}
+
+.current .content .images img {
+	width: 500px;
+}
+
+.current .content .arrow img {
+	height: 50px;
+	width: 25px;
+	margin-bottom: 125px;
+}
+
+.current .content .arrow :hover {
+	opacity: 0.5;
+}
+
+.contact .left-col {
+	width: 40%;
+}
+
+.contact .side-by-side {
+	display: inline;
+}
+
+.contact .images {
+	position: absolute;
+	bottom: 0;
+	left: 150px;
+}
+
+.contact .images img {
+	height: 220px;
+	display: block;
+	margin: 12px;
 }
