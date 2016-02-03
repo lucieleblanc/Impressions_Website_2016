@@ -103,6 +103,9 @@ marquee img {
 	margin: 0 auto;
 }
 
+
+/** LINES **/
+
 .line {
 	background-color: white;
 	opacity: 0.52;
@@ -192,6 +195,26 @@ marquee img {
 	right: 40px;
 }
 
+.submissions .line-horizontal {
+	width: 90%;
+	right: 0;
+	top: 230px;
+}
+
+.submissions .line-vertical-1 {
+	height: 90%;
+	bottom: 0;
+	left: 270px;
+}
+
+.submissions .line-vertical-2 {
+	height: 80%;
+	top: 75px;
+	right: 40px;
+}
+
+/** CONTENT **/
+
 .content p {
 	color: white;
 	font-family: sans-serif;
@@ -225,33 +248,6 @@ marquee img {
 	margin-right: 70px;
 }
 
-/* TODO: maybe the image could 
-instead be part of the 
-vertical-line div it is
-attached to? */
-.about .aligned-right {
-	position: absolute;
-	width: 280px;
-	right: 0;
-	top: 133px;
-}
-
-.archives .top {
-	position: absolute;
-	top: 0;
-	left: 310px;
-}
-
-.archives .left {
-	position: absolute;
-	top: 250px;
-	left: 0;
-}
-
-.archives .top img, .archives .left img {
-	width: 290px;
-}
-
 .current .content {
 	width: 60%;
 	height: 70%;
@@ -278,6 +274,37 @@ attached to? */
 	opacity: 0.5;
 }
 
+/* TODO: maybe the image could 
+instead be part of the 
+vertical-line div it is
+attached to? */
+
+/** IMAGES **/
+
+.about .aligned-right {
+	position: absolute;
+	width: 280px;
+	right: 0;
+	top: 133px;
+}
+
+.archives .top {
+	position: absolute;
+	top: 0;
+	left: 310px;
+}
+
+.archives .left {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.archives .top img, .archives .left img {
+	height: 220px;
+	margin: 10px;
+}
+
 .contact .left-col {
 	width: 40%;
 }
@@ -296,4 +323,21 @@ attached to? */
 	height: 220px;
 	display: block;
 	margin: 12px;
+}
+
+.submissions .left {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.submissioms .right {
+	position: absolute;
+	top: 0;
+	right: 300px;
+}
+
+.submissions .left img, .submissions .right img {
+	width: 250px;
+	margin: 10px;
 }
