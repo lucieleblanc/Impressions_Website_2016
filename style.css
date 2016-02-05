@@ -18,10 +18,10 @@ a {
 	src: url(fonts/trade-gothic.ttf);
 }
 
-@font-face {
+/*@font-face {
 	font-family: TradeGothicBold;
 	src: url(fonts/trade-gothic-bold-2.ttf);
-}
+}*/
 
 @font-face {
 	font-family: TradeGothicCondensed;
@@ -61,7 +61,7 @@ marquee img {
 
 .menu-button p {
 	font-size: 8pt;
-	font-family: TradeGothicBold, sans-serif;
+	font-family: TradeGothic, sans-serif;
 	letter-spacing: 1px;
 	margin-top: 1px;
 	text-align: center;
@@ -112,7 +112,7 @@ marquee img {
 }
 
 .archives .title-box .page-title {
-	top: 210px;
+	top: 230px;
 }
 
 .current .title-box .page-title {
@@ -295,11 +295,15 @@ marquee img {
 	display: inline;
 }
 
+
+/** CAROUSEL **/
+
 .current .content .images img {
 	width: 500px;
 }
 
 .current .content .arrow img {
+	position: absolute;
 	height: 50px;
 	width: 25px;
 	margin-bottom: 125px;
@@ -308,6 +312,27 @@ marquee img {
 .current .content .arrow :hover {
 	opacity: 0.5;
 }
+
+.slider {
+	position: relative;
+	width: 100%;
+	height: 470px;
+	border-bottom: 1px solid #ddd;
+}
+
+.slide {
+	position: absolute;
+	display: none;
+	visibility: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.active-slide {
+    display: block;
+    visibility: visible;
+}
+
 
 /* TODO: maybe the image could 
 instead be part of the 
