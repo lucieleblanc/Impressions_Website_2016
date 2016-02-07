@@ -1,29 +1,36 @@
 
 $(document).ready(function(){
 
-    $('.arrow-next').click(function() {
-        var currentSlide = $('.active-slide');
-        var nextSlide = currentSlide.next();
-        
-        if (nextSlide.length == 0) {
-            nextSlide = $('.slide').first();
+    //this number MUST match the number of page sets to show
+    var NUMSLIDES = 28;
+
+    //change the image you want to start on
+    var slideCount = 1;
+
+    $('.arrow-right').click(function() {
+
+        slideCount++;
+
+        if (slideCount > NUMSLIDES) {
+            slideCount = 1;
         }
+
+        var currentSlide = $(".slide img");
+        currentSlide.attr("src", ("current/" + slideCount + ".jpg"));
         
-        currentSlide.fadeOut(600).removeClass('active-slide');
-        nextSlide.fadeIn(600).addClass('active-slide');
         
     });
-    
-    $('.arrow-prev').click(function() {
-        var currentSlide = $('.active-slide');
-        var prevSlide = currentSlide.prev();
+
+    $('.arrow-left').click(function() {
         
-        if (prevSlide.length == 0) {
-            prevSlide = $('.slide').last();
+        if (slideCount <= 1) {
+            slideCount = NUMSLIDES;
         }
-        
-        currentSlide.fadeOut(600).removeClass('active-slide');
-        prevSlide.fadeIn(600).addClass('active-slide')
+
+        slideCount--;
+
+        var currentSlide = $(".slide img");
+        currentSlide.attr("src", ("current/" + slideCount + ".jpg"));
 
     });
 });

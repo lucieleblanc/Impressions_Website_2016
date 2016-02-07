@@ -116,7 +116,9 @@ marquee img {
 }
 
 .current .title-box .page-title {
-	top: 300px;
+	width: 500px;
+	top: 175px;
+	left: -200px;
 }
 
 .contact .title-box .page-title {
@@ -174,7 +176,7 @@ marquee img {
 .current .line-horizontal-1 {
 	top: 70px;
 	right: 0;
-	width: 90%;
+	width: 85%;
 }
 
 .current .line-horizontal-2 {
@@ -184,7 +186,7 @@ marquee img {
 }
 
 .archives .line-vertical-1 {
-	left: 300px;
+	left: 235px;
 	top: 0;
 }
 
@@ -250,12 +252,20 @@ marquee img {
 	line-height: 1.5em;
 }
 
-.content h2 {
+.content h2, .contact h4 {
 	color: white;
 	opacity: 0.5;
 	font-family: TradeGothicCondensed, sans-serif;
 	font-weight: 200;
+}
+
+.content h2 {
 	font-size: 3em;
+}
+
+.content h4 {
+	font-size: 1.5em;
+	margin-bottom: 0;
 }
 
 .about .content {
@@ -267,7 +277,7 @@ marquee img {
 .archives .content {
 	width: 60%;
 	margin-top: 300px;
-	margin-left: 30%;
+	margin-left: 25%;
 }
 
 .contact .content {
@@ -277,62 +287,71 @@ marquee img {
 	margin-right: 70px;
 }
 
+.contact .content p {
+	line-height: 2em;
+}
+
+.contact .content li {
+	line-height: 2em;
+}
+
+.contact .content a {
+	text-decoration: underline;
+}
+
 .submissions .content {
 	width: 60%;
 	margin-top: 150px;
 	margin-left: 25%;
 }
 
-.current .content {
-	width: 60%;
-	height: 70%;
-	margin: 100px auto;
-	background-color: white;
-}
-
-.current .content div {
-	margin: 0 auto;
-	display: inline;
-}
-
 
 /** CAROUSEL **/
 
-.current .content .images img {
-	width: 500px;
-}
-
-.current .content .arrow img {
+.current .slideshow {
 	position: absolute;
-	height: 50px;
-	width: 25px;
-	margin-bottom: 125px;
+	height: 400px;
+	top: 50%;
+	left: 50%;
+	margin: -200px 0 0 -30%;
+}
+  
+.current .slideshow div {
+	margin: 0 auto;
+	height: 100%;
+	display: inline-block;
 }
 
-.current .content .arrow :hover {
-	opacity: 0.5;
+.current .slideshow .slide {
 }
 
-.slider {
-	position: relative;
-	width: 100%;
-	height: 470px;
-	border-bottom: 1px solid #ddd;
-}
-
-.slide {
-	position: absolute;
-	display: none;
-	visibility: hidden;
-	width: 100%;
+.current .slideshow .slide img {
 	height: 100%;
 }
 
-.active-slide {
-    display: block;
-    visibility: visible;
+.current .slideshow .arrow {
+	margin-top: 150px;
+	height: 50px;
 }
 
+.current .slideshow .arrow img {
+	height: 50px;
+	width: 25px;
+	margin: 10px;
+	opacity: 0.52;
+}
+
+.current .slideshow .arrow img :hover {
+	opacity: 0.75;
+}
+
+.current .slideshow .arrow-left {
+	float: left;
+}
+
+.current .slideshow .arrow-right {
+	float: right;
+}
 
 /* TODO: maybe the image could 
 instead be part of the 
@@ -351,7 +370,7 @@ attached to? */
 .archives .top {
 	position: absolute;
 	top: 0;
-	left: 310px;
+	left: 245px;
 }
 
 .archives .left {
@@ -362,7 +381,7 @@ attached to? */
 
 .archives .top img, .archives .left img {
 	height: 220px;
-	margin: 10px;
+	margin: 10px 5px;
 }
 
 .contact .left-col {
@@ -383,6 +402,21 @@ attached to? */
 	height: 220px;
 	display: block;
 	margin: 12px;
+}
+
+.contact .web-team {
+	-webkit-transform: rotate(-90deg); /* Safari and Chrome */
+	-moz-transform: rotate(-90deg);   /* Firefox */
+	-ms-transform: rotate(-90deg);   /* IE 9 */
+	transform: rotate(-90deg);
+	color: white;
+	opacity: 0.75;
+	font-family: sans-serif;
+	font-size: 10px;
+	text-transform: uppercase;
+	position: absolute;
+	bottom: 175px;
+	left: -20px;
 }
 
 .submissions .left {
