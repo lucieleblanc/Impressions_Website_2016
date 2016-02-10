@@ -29,17 +29,18 @@ a {
 }
 
 marquee {
-	margin-top: 75px;
+	margin-top: 80px;
 	background-color: #000;
 	color: #000;
+	height: 40%;
 }
 
 marquee img {
-	height: 250px;
+	height: 275px;
 }
 
 .logo {
-	height: 150px;
+	width: 80%;
 	margin: 15px auto;
 	display: block;
 	text-align: center;
@@ -51,6 +52,7 @@ marquee img {
 	top: 25px;
 	right: 25px;
 	opacity: 0.52;
+	z-index: 2;
 }
 
 .menu-button img {
@@ -65,6 +67,42 @@ marquee img {
 	letter-spacing: 1px;
 	margin-top: 1px;
 	text-align: center;
+}
+
+.menu-navbar {
+	z-index: 1;
+	display: inline-block;
+	width: 100%;
+	/*-webkit-transform: rotate(90deg); 
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);*/
+	position: absolute;
+	top: 0;
+	background-color: rgba(255, 230, 230, 0.52);
+	text-align: center;
+}
+
+.menu-navbar ul {
+    text-align: center;
+    min-width: 100px;
+    margin: 0 auto;
+}
+
+.menu-navbar ul :after {
+	content: none;
+	width: 100%;
+    display: inline-block;
+}
+
+.menu-navbar ul li {
+	margin: 0 auto;
+	color: white;
+	display: inline-block;
+	font-family: Hadrian, sans-serif;
+	font-size: 40px;
+	z-index: 1;
+	padding: 10px 30px;
 }
 
 .home-button {
@@ -101,7 +139,7 @@ marquee img {
 
 .title-box .page-title h1 {
 	color: #ffeeee;
-	font-size: 8em;
+	font-size: 128px;
 	font-family: Hadrian;
 	text-align: right;
 	margin: 0;
@@ -117,8 +155,12 @@ marquee img {
 
 .current .title-box .page-title {
 	width: 500px;
-	top: 175px;
-	left: -200px;
+	top: 195px;
+	left: -190px;
+}
+
+.current .title-box .page-title h1 {
+	font-size: 116px;
 }
 
 .contact .title-box .page-title {
@@ -126,7 +168,11 @@ marquee img {
 }
 
 .submissions .title-box .page-title {
-	top: 350px;
+	top: 330px;
+}
+
+.submissions .title-box .page-title h1 {
+	font-size: 116px;
 }
 
 /** LINES **/
@@ -139,12 +185,17 @@ marquee img {
 
 .line-vertical {
 	width: 3px;
-	height: 100%;
 }
 
 .line-horizontal {
-	width: 100%;
 	height: 3px;
+}
+
+.menu-line {
+	width: 3px;
+	right: 40px;
+	top: 80px;
+	bottom: 130px;
 }
 
 .main .line-vertical {
@@ -159,12 +210,13 @@ marquee img {
 .about .line-vertical {
 	right: 280px;
 	top: 0px;
+	bottom: 0px;
 }
 
 .about .line-horizontal-1{
 	right: 0;
+	left: 150px;
 	top: 130px;
-	width: 90%;
 }
 
 .about .line-horizontal-2 {
@@ -185,57 +237,40 @@ marquee img {
 	width: 80%;
 }
 
-.archives .line-vertical-1 {
-	left: 235px;
+.archives .line-vertical {
+	left: 240px;
 	top: 0;
-}
-
-.archives .line-vertical-2 {
-	right: 40px;
-	top: 15%;
-	height: 80%;
+	bottom: 0;
 }
 
 .archives .line-horizontal {
-	width: 90%;
 	top: 240px;
 	right: 0;
+	left: 150px;
 }
 
 .contact .line-horizontal {
-	width: 60%;
 	top: 200px;
 	right: 0;
+	left: 550px;
 }
 
-.contact .line-vertical-1 {
-	height: 40%;
+.contact .line-vertical {
 	left: 450px;
 	top: 0;
-}
-
-.contact .line-vertical-2 {
-	height: 80%;
-	top: 75px;
-	right: 40px;
+	bottom: 440px;
 }
 
 .submissions .line-horizontal {
-	width: 90%;
 	right: 0;
+	left: 150px;
 	top: 230px;
 }
 
-.submissions .line-vertical-1 {
-	height: 90%;
+.submissions .line-vertical {
+	top: 0;
 	bottom: 0;
 	left: 270px;
-}
-
-.submissions .line-vertical-2 {
-	height: 80%;
-	top: 75px;
-	right: 40px;
 }
 
 /** CONTENT **/
@@ -243,16 +278,19 @@ marquee img {
 .content p {
 	color: #eed;
 	font-family: TradeGothic, sans-serif;
-	line-height:3em;
+	line-height: 3em;
+	font-size: 14px;
 }
 
 .content li {
 	color: #eed;
 	font-family: TradeGothic, sans-serif;
-	line-height: 1.5em;
+	font-size: 14px;
+	line-height: 3em;
 }
 
-.content h2, .contact h4 {
+.content h2, .content h4 {
+	text-transform: uppercase;
 	color: white;
 	opacity: 0.5;
 	font-family: TradeGothicCondensed, sans-serif;
@@ -269,40 +307,32 @@ marquee img {
 }
 
 .about .content {
-	width: 800px;
-	margin-top: 200px;
-	margin-left: 200px;
+	position: absolute;
+	top: 200px;
+	left: 200px;
+	right: 350px;
 }
 
 .archives .content {
-	width: 60%;
-	margin-top: 300px;
-	margin-left: 25%;
+	position: absolute;
+	top: 300px;
+	left: 330px;
+	right: 200px;
 }
 
 .contact .content {
-	width: 750px;
 	float: right;
-	margin-top: 80px;
-	margin-right: 70px;
-}
-
-.contact .content p {
-	line-height: 2em;
-}
-
-.contact .content li {
-	line-height: 2em;
-}
-
-.contact .content a {
-	text-decoration: underline;
+	position: absolute;
+	left: 550px;
+	right: 100px;
+	top: 90px;
 }
 
 .submissions .content {
-	width: 60%;
-	margin-top: 150px;
-	margin-left: 25%;
+	position: absolute;
+	top: 120px;
+	left: 330px;
+	right: 150px;
 }
 
 
@@ -310,19 +340,16 @@ marquee img {
 
 .current .slideshow {
 	position: absolute;
-	height: 400px;
+	height: 450px;
 	top: 50%;
 	left: 50%;
-	margin: -200px 0 0 -30%;
+	margin: -225px 0 0 -30%;
 }
   
 .current .slideshow div {
 	margin: 0 auto;
 	height: 100%;
 	display: inline-block;
-}
-
-.current .slideshow .slide {
 }
 
 .current .slideshow .slide img {
@@ -370,13 +397,13 @@ attached to? */
 .archives .top {
 	position: absolute;
 	top: 0;
-	left: 245px;
+	left: 250px;
 }
 
 .archives .left {
 	position: absolute;
 	bottom: 0;
-	left: 0;
+	left: 5px;
 }
 
 .archives .top img, .archives .left img {

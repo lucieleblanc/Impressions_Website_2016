@@ -1,10 +1,7 @@
-
+//SPRING 2015
 $(document).ready(function(){
-
-    //this number MUST match the number of page sets to show
+    
     var NUMSLIDES = 28;
-
-    //change the image you want to start on
     var slideCount = 1;
 
     $('.arrow-right').click(function() {
