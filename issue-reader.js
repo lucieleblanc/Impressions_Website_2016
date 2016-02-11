@@ -1,10 +1,7 @@
 
-$(document).ready(function(){
-
-    //this number MUST match the number of page sets to show
-    var NUMSLIDES = 28;
-
-    //change the image you want to start on
+var reader = function(length){
+    
+    var NUMSLIDES = length;
     var slideCount = 1;
 
     $('.arrow-right').click(function() {
@@ -29,12 +26,10 @@ $(document).ready(function(){
     $('.menu-button').click(function() {
         console.log("function called");
         if ($('.menu-navbar').css("display") == "none") {
-            console.log("display is hidden, changing to inline-block");
             $('.menu-navbar').css({"display": "inline-block"});
         } else {
-            console.log("display is inline-block, changing to hidden");
             $('.menu-navbar').css({"display": "none"});
         }
         console.log("function finished");
     });
-});
+};

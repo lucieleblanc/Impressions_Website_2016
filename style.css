@@ -28,15 +28,26 @@ a {
 	src: url(fonts/trade-gothic-condensed-18.ttf);
 }
 
-marquee {
+.marquee {
+	position: relative;
 	margin-top: 80px;
+	overflow: hidden;
 	background-color: #000;
 	color: #000;
-	height: 40%;
+	height: 275px;
+	border: solid white 3px;
+	width: 11400px;
 }
 
-marquee img {
+.marquee span {
+	width: 275px;
+	display: inline;
+}
+
+.marquee img {
 	height: 275px;
+	white-space: nowrap;
+	display: inline;
 }
 
 .logo {
@@ -52,7 +63,7 @@ marquee img {
 	top: 25px;
 	right: 25px;
 	opacity: 0.52;
-	z-index: 2;
+	z-index: 3;
 }
 
 .menu-button img {
@@ -69,40 +80,58 @@ marquee img {
 	text-align: center;
 }
 
-.menu-navbar {
-	z-index: 1;
-	display: inline-block;
-	width: 100%;
-	/*-webkit-transform: rotate(90deg); 
-	-moz-transform: rotate(90deg);
-	-ms-transform: rotate(90deg);
-	transform: rotate(90deg);*/
+.menu-bar {
+	display: none;
+}
+
+.menu-background {
+	background-color: #fee;
+	opacity: 0.25;
 	position: absolute;
 	top: 0;
-	background-color: rgba(255, 230, 230, 0.52);
-	text-align: center;
-}
-
-.menu-navbar ul {
-    text-align: center;
-    min-width: 100px;
-    margin: 0 auto;
-}
-
-.menu-navbar ul :after {
-	content: none;
-	width: 100%;
-    display: inline-block;
-}
-
-.menu-navbar ul li {
-	margin: 0 auto;
-	color: white;
-	display: inline-block;
-	font-family: Hadrian, sans-serif;
-	font-size: 40px;
+	bottom: 0;
+	right: 0;
+	width: 90px;
 	z-index: 1;
-	padding: 10px 30px;
+}
+
+.menu-links {
+	z-index: 2;
+	display: block;
+	-webkit-transform: rotate(90deg); 
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-ms-transform-origin: top left;
+	transform-origin: top left;
+	position: absolute;
+	top: 0;
+	right: -100vh;
+	width: 100vh;
+}
+
+.menu-links p {
+	padding-left: 80px;
+	padding-right: 40px;
+	padding-top: 10px;
+	text-align: justify;
+	opacity: 0.75;
+	color: #e7e0e0;
+	font-family: Hadrian, sans-serif;
+	font-size: 35px;
+	margin: 10px auto;
+}
+
+.menu-links p:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+.menu-links p span {
+	display: inline-block;
 }
 
 .home-button {
@@ -121,7 +150,7 @@ marquee img {
 /** PAGE TITLE **/
 
 .title-box {
-	opacity: 0.52;
+	opacity: 0.65;
 	position: absolute;
 	top: 10px;
 	left: 10px;
@@ -129,7 +158,9 @@ marquee img {
 
 .title-box .page-title {
 	position: absolute;
-	left: 4em;
+	top: 195px;
+	width: 500px;
+	left: -185px;
 	right: 0;
 	-webkit-transform: rotate(-90deg); /* Safari and Chrome */
 	-moz-transform: rotate(-90deg);   /* Firefox */
@@ -138,37 +169,15 @@ marquee img {
 }
 
 .title-box .page-title h1 {
-	color: #ffeeee;
+	color: #fee;
 	font-size: 128px;
 	font-family: Hadrian;
 	text-align: right;
 	margin: 0;
 }
 
-.about .title-box .page-title {
-	top: 115px;
-}
-
-.archives .title-box .page-title {
-	top: 230px;
-}
-
-.current .title-box .page-title {
-	width: 500px;
-	top: 195px;
-	left: -190px;
-}
-
 .current .title-box .page-title h1 {
 	font-size: 116px;
-}
-
-.contact .title-box .page-title {
-	top: 175px;
-}
-
-.submissions .title-box .page-title {
-	top: 330px;
 }
 
 .submissions .title-box .page-title h1 {
@@ -179,7 +188,7 @@ marquee img {
 
 .line {
 	background-color: #ffeeee;
-	opacity: 0.52;
+	opacity: 0.40;
 	position: absolute;
 }
 
@@ -215,7 +224,7 @@ marquee img {
 
 .about .line-horizontal-1{
 	right: 0;
-	left: 150px;
+	left: 170px;
 	top: 130px;
 }
 
@@ -223,6 +232,12 @@ marquee img {
 	left: 0;
 	bottom: 70px;
 	width: 85%;
+}
+
+.about .line-horizontal-3 {
+	position: relative;
+	width: 100%;
+	margin-top: -4px;
 }
 
 .current .line-horizontal-1 {
@@ -238,13 +253,13 @@ marquee img {
 }
 
 .archives .line-vertical {
-	left: 240px;
+	left: 270px;
 	top: 0;
 	bottom: 0;
 }
 
 .archives .line-horizontal {
-	top: 240px;
+	top: 270px;
 	right: 0;
 	left: 150px;
 }
@@ -252,13 +267,13 @@ marquee img {
 .contact .line-horizontal {
 	top: 200px;
 	right: 0;
-	left: 550px;
+	left: 530px;
 }
 
 .contact .line-vertical {
 	left: 450px;
 	top: 0;
-	bottom: 440px;
+	bottom: 465px;
 }
 
 .submissions .line-horizontal {
@@ -275,18 +290,17 @@ marquee img {
 
 /** CONTENT **/
 
-.content p {
-	color: #eed;
-	font-family: TradeGothic, sans-serif;
-	line-height: 3em;
-	font-size: 14px;
+.content {
+	position: absolute;
 }
 
-.content li {
-	color: #eed;
+.content p, .content li {
+	color: #fee;
+	opacity: 0.75;
 	font-family: TradeGothic, sans-serif;
-	font-size: 14px;
 	line-height: 3em;
+	font-size: 14px;
+	text-align: justify;
 }
 
 .content h2, .content h4 {
@@ -295,6 +309,17 @@ marquee img {
 	opacity: 0.5;
 	font-family: TradeGothicCondensed, sans-serif;
 	font-weight: 200;
+}
+
+.content ul {
+	list-style-type: none;
+	list-style-position: inside;
+	margin: 0;
+	padding: 0;
+}
+
+.content br {
+	line-height: 0.5em;
 }
 
 .content h2 {
@@ -307,30 +332,32 @@ marquee img {
 }
 
 .about .content {
-	position: absolute;
-	top: 200px;
-	left: 200px;
+	top: 170px;
+	left: 170px;
 	right: 350px;
 }
 
 .archives .content {
-	position: absolute;
-	top: 300px;
-	left: 330px;
+	top: 310px;
+	left: 350px;
 	right: 200px;
 }
 
 .contact .content {
 	float: right;
-	position: absolute;
-	left: 550px;
-	right: 100px;
-	top: 90px;
+	left: 530px;
+	right: 110px;
+	top: 40px;
+}
+
+.current .content {
+	bottom: 0px;
+	left: 25px;
+	right: 300px;
 }
 
 .submissions .content {
-	position: absolute;
-	top: 120px;
+	top: 95px;
 	left: 330px;
 	right: 150px;
 }
@@ -340,10 +367,10 @@ marquee img {
 
 .current .slideshow {
 	position: absolute;
-	height: 450px;
-	top: 50%;
+	top: 110px;
+	bottom: 110px;
 	left: 50%;
-	margin: -225px 0 0 -30%;
+	margin: 0 0 0 -30%;
 }
   
 .current .slideshow div {
@@ -357,8 +384,12 @@ marquee img {
 }
 
 .current .slideshow .arrow {
-	margin-top: 150px;
+	margin-top: 200px;
 	height: 50px;
+}
+
+.current .slideshow .arrow a :hover {
+	opacity: 0.80;
 }
 
 .current .slideshow .arrow img {
@@ -366,10 +397,10 @@ marquee img {
 	width: 25px;
 	margin: 10px;
 	opacity: 0.52;
-}
-
-.current .slideshow .arrow img :hover {
-	opacity: 0.75;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition: opacity 0.5s;
+	-o-transition: opacity 0.5s;
+	transition: opacity 0.5s;
 }
 
 .current .slideshow .arrow-left {
@@ -380,24 +411,22 @@ marquee img {
 	float: right;
 }
 
-/* TODO: maybe the image could 
-instead be part of the 
-vertical-line div it is
-attached to? */
-
 /** IMAGES **/
 
 .about .aligned-right {
 	position: absolute;
-	width: 280px;
 	right: 0;
 	top: 133px;
+}
+
+.about .aligned-right img {
+	width: 280px;
 }
 
 .archives .top {
 	position: absolute;
 	top: 0;
-	left: 250px;
+	left: 280px;
 }
 
 .archives .left {
@@ -407,7 +436,7 @@ attached to? */
 }
 
 .archives .top img, .archives .left img {
-	height: 220px;
+	height: 250px;
 	margin: 10px 5px;
 }
 

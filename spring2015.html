@@ -20,15 +20,28 @@
 	<div class="line line-horizontal line-horizontal-2"></div>
 
 	<div class="menu-button">
-		<a href="#"> <!-- will add menu -->
+		<a href="#">
 			<img src="images/menu.png">
 			<p>MENU</p>
 		</a>
 	</div>
 
+	<div class="menu-bar">
+		<div class="menu-background"></div>
+		<div class="menu-links"> 
+			<p>
+				<span><a href="about.html">about</a></span>
+				<span><a href="current.html">current issue</a></span>
+				<span><a href="submissions.html">submissions</a></span>
+				<span><a href="archives.html">archives</a></span>
+				<span><a href="contact.html">contact</a></span>
+			</p>
+		</div>
+	</div>
+
 	<div class="home-button">
-		<a href='home.html'>
-			<img src="images/logo.jpg">
+		<a href='index.html'>
+			<img src="images/logo.jpg" alt="Impressions logo">
 		</a>
 	</div>
 
@@ -41,23 +54,32 @@
 	<div class="slideshow">
 		<div class="arrow arrow-left">
 			<a href="#">
-				<img src="images/current/arrow-left.png">
+				<img src="images/current/arrow-left.png" alt="arrow to previous page">
 			</a>
 		</div>
 
 		<div class="slide">
-			<img src="images/spring2015/1.jpg">
+			<img src="images/current/1.jpg" alt="page of Impressions magazine">
 		</div>
 
 		<div class="arrow arrow-right">
 			<a href="#">
-				<img src="images/current/arrow-right.png">
+				<img src="images/current/arrow-right.png" alt="arrow to next page">
 			</a>
 		</div>
 	</div>
 
+	<div class="content">
+		<p>A limited edition run of this issue is available for purchase. Please contact us at <a href="mailto:info@mhsimpressions.com">info@mhsimpressions.com</a> for more information.</p>
+	</div>
+	
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="spring2015script.js"></script>
+	<script src="menu.js"></script>
+	<script src="issue-reader.js"></script>
+	<script>
+		reader(28);
+	</script>
 
 </body>
 </html>
