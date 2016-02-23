@@ -1,5 +1,5 @@
 
-var reader = function(length){
+var reader = function(directory, length){
     
     var NUMSLIDES = length;
     var slideCount = 1;
@@ -10,7 +10,7 @@ var reader = function(length){
             slideCount = 1;
         }
         var currentSlide = $(".slide img");
-        currentSlide.attr("src", ("images/current/" + slideCount + ".jpg"));
+        currentSlide.attr("src", ("images/" + directory + "/" + slideCount + ".jpg"));
     });
 
     $('.arrow-left').click(function() {
@@ -19,7 +19,7 @@ var reader = function(length){
         }
         slideCount--;
         var currentSlide = $(".slide img");
-        currentSlide.attr("src", ("images/current/" + slideCount + ".jpg"));
+        currentSlide.attr("src", ("images/" + directory + "/" + slideCount + ".jpg"));
 
     });
 

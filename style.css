@@ -122,6 +122,7 @@ a {
 	font-family: Hadrian, sans-serif;
 	font-size: 35px;
 	margin: 10px auto;
+	letter-spacing: 1px;
 }
 
 .menu-links p:after {
@@ -202,7 +203,7 @@ a {
 
 .menu-line {
 	width: 3px;
-	right: 40px;
+	right: 42px;
 	top: 80px;
 	bottom: 130px;
 }
@@ -243,7 +244,7 @@ a {
 .current .line-horizontal-1 {
 	top: 70px;
 	right: 0;
-	width: 85%;
+	left: 150px;
 }
 
 .current .line-horizontal-2 {
@@ -367,16 +368,17 @@ a {
 
 .current .slideshow {
 	position: absolute;
-	top: 110px;
-	bottom: 110px;
+	top: 130px;
+	bottom: 130px;
 	left: 50%;
 	margin: 0 0 0 -30%;
+	display: inline-block;
 }
   
 .current .slideshow div {
 	margin: 0 auto;
 	height: 100%;
-	display: inline-block;
+	display: inline;
 }
 
 .current .slideshow .slide img {
