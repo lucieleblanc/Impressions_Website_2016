@@ -10,44 +10,22 @@ a {
 
 @font-face {
 	font-family: Hadrian;
-    src: url(fonts/hadrian-bold.ttf);
+    src: url(./fonts/hadrian-bold.ttf);
 }
 
 @font-face {
 	font-family: TradeGothic;
-	src: url(fonts/trade-gothic.ttf);
+	src: url(./fonts/trade-gothic.ttf);
 }
 
-/*@font-face {
+@font-face {
 	font-family: TradeGothicBold;
-	src: url(fonts/trade-gothic-bold-2.ttf);
-}*/
+	src: url(./fonts/trade-gothic-bold-2.ttf);
+}
 
 @font-face {
 	font-family: TradeGothicCondensed;
-	src: url(fonts/trade-gothic-condensed-18.ttf);
-}
-
-.marquee {
-	position: relative;
-	margin-top: 80px;
-	overflow: hidden;
-	background-color: #000;
-	color: #000;
-	height: 275px;
-	border: solid white 3px;
-	width: 11400px;
-}
-
-.marquee span {
-	width: 275px;
-	display: inline;
-}
-
-.marquee img {
-	height: 275px;
-	white-space: nowrap;
-	display: inline;
+	src: url(./fonts/trade-gothic-condensed-18.ttf);
 }
 
 .logo {
